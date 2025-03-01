@@ -91,9 +91,9 @@ const Navbar: React.FC = () => {
           label="Home"
         />
         <NavItem
-          to="/challenge"
+          to="/challenges"
           icon={<FaFire size={20} className="text-red-500" />}
-          label="Challenge"
+          label="Challenges"
         />
         <NavItem
           to="/leaderboard"
