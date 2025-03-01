@@ -27,7 +27,7 @@ const SearchBar: React.FC = () => {
       />
       <button
         type="submit"
-        className={`absolute right-0 top-0 h-full px-4 rounded-r-xl ${
+        className={`absolute right-0 top-0 h-full px-4 rounded-r-xl hover:cursor-pointer ${
           isDarkMode
             ? "bg-cyan-500 hover:bg-cyan-600 text-gray-900"
             : "bg-purple-500 hover:bg-purple-600 text-white"

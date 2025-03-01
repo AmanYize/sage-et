@@ -7,13 +7,15 @@ import {
   FaTrophy,
   FaUser,
   FaHome,
-} from "react-icons/fa";
+  FaShoppingCart,
+  FaBoxOpen,
+} from "react-icons/fa"; // Added icons for Shop and Inventory
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
 import { toggleDarkMode } from "../../store/darkModeSlice";
 import { motion } from "framer-motion";
 import NavItem from "./NavItem";
-import SearchBar from "./Searchbar";
+import SearchBar from "./SearchBar";
 import MobileMenu from "./MobileMenu";
 import XPSection from "./XPSection";
 
@@ -36,7 +38,7 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`flex justify-between items-center p-4 ${
-        isDarkMode ? "bg-slate-900 text-white" : "bg-slate-50 text-black"
+        isDarkMode ? "bg-slate-950 text-white" : "bg-slate-50 text-black"
       } shadow-md`}
     >
       {/* Logo */}
@@ -103,6 +105,17 @@ const Navbar: React.FC = () => {
           icon={<FaUser size={20} className="text-blue-500" />}
           label="Profile"
         />
+        {/* New Links: Shop and Inventory */}
+        <NavItem
+          to="/shop"
+          icon={<FaShoppingCart size={20} className="text-purple-500" />}
+          label="Shop"
+        />
+        <NavItem
+          to="/inventory"
+          icon={<FaBoxOpen size={20} className="text-teal-500" />}
+          label="Inventory"
+        />
       </nav>
 
       {/* XP Section */}
@@ -129,7 +142,6 @@ const Navbar: React.FC = () => {
         )}
       </motion.button>
 
-      {/* Mobile Menu */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

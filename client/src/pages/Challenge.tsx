@@ -1,5 +1,9 @@
 const Challenge = () => {
-  return <div>Challenge</div>;
+  return (
+    <div>
+      <h1>World Map</h1>
+    </div>
+  );
 };
 
 export default Challenge;

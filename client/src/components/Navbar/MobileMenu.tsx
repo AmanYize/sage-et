@@ -11,7 +11,7 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen /*onClose */ }) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const isDarkMode = useSelector(
     (state: RootState) => state.darkMode.isDarkMode
   );

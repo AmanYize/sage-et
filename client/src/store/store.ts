@@ -1,7 +1,7 @@
 // store/store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import darkModeReducer from "./darkModeSlice";
-
+import userReducer from "./userSlice";
 // Define the root state type
 export type RootState = ReturnType<typeof store.getState>;
 
@@ -9,6 +9,7 @@ export type RootState = ReturnType<typeof store.getState>;
 const store = configureStore({
   reducer: {
     darkMode: darkModeReducer,
+    user: userReducer,
   },
 });
 
